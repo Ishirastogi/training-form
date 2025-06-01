@@ -50,7 +50,7 @@
             return;
         }
 
-        let response = await fetch(`http://localhost:5000/get-data?role=${role}`); // Include role in query
+        let response = await fetch(`https://training-form-ensh.onrender.com//get-data?role=${role}`); // Include role in query
         let submissions = await response.json();
 
         console.log("Fetched Data:", submissions); // ✅ Debugging step
@@ -120,9 +120,6 @@
 
 // Run function on page load
 window.onload = loadDashboardData;
-
-
-
 
         document.addEventListener("DOMContentLoaded", function () {
             const role = localStorage.getItem("role");
